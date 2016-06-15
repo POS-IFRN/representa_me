@@ -11,9 +11,58 @@
   <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
+      <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo blue-text text-lighten-1">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#" class="blue-text text-lighten-1">Navbar Link</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+      <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center blue-text text-lighten-1">Representa Me</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Projeto desenvolvido para a disciplina de Projeto de Interface de Usuário</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light blue lighten-1">Get Started</a>
+        </div>
+        <br><br>
+        <form id="form_consulta" class="col s12">
+          <div class="input-field col s6">
+              <input id="txtbusca" type="text" class="validate">
+              <label for="txtbusca">Busca</label>
+            </div>
+            <div class="input-field col s6">
+            <select>
+             <option value="" disabled selected>Escolha o tipo de buscar</option>
+             <option value="estado">Estado</option>
+             <option value="politico">Político</option>
+             <option value="partido">Partido</option>
+            </select>
+            <label>Tipo de busca</label>
+          </div>
+          </form>
+        </div>
+
+    </div>
+
+      </div>
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="materialize/js/materialize.js">
         </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+      </script>
         <script src="materialize/js/init.js"></script>
     </body>
 </html>
