@@ -1,96 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-      <title>Representa me</title>
-      <!-- CSS  -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-   </head>
-   <body>
-      <nav class="white" role="navigation">
-         <div class="nav-wrapper container">
-		 
-            <a id="logo-container" href="#" class="brand-logo blue-text text-lighten-1">Representa Me</a>
-            <ul class="right hide-on-med-and-down">
-               <li><a href="busca.html" class="blue-text text-lighten-1">LINK PRA VOLTAR PARA A LISTA DOS POLITICOS</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-               <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-         </div>
-      </nav>
-      <div class="section no-pad-bot">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Representa me</title>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body>
+        <nav class="blue lighten-1 white-text" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a> 
+        </nav>
+        <div class="section no-pad-bot grey lighten-3">
         <div class="container">
-          <div class="row center col s12">
-            
-            <h2 class="blue-text text-lighten-1">Jair Bolsonaro - Deputado Federal</h2>
+            <div class="row center col s12">
+                <h2 class="blue-text text-lighten-1">Jair Bolsonaro - Deputado Federal</h2>
+                <div class="row">
+                    <h3>Dados Gerais</h3>
+                    <h5 class="col s9">Nome Completo: JAIR MESSIAS BOLSONARO</h5>
+                    <img src="assets/images/fotoperfil.png">
+                </div>
+            </div>
             <div class="row">
-            <h3>Dados Gerais</h3>
-            <h5 class="col s9">Nome Completo: JAIR MESSIAS BOLSONARO</h5>
-            <img src="assets/images/fotoperfil.png">
+                <h3>Informações sobre atuação do político</h3>
+                <div>
+                    <h4>Gastos do político</h4>
+                    <div id="graf_gasto">
+                    </div>
+                </div>
+                <div>
+                    <h4>Projetos de Lei</h4>
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">Projeto 1</div>
+                            <div class="collapsible-body">
+                                <p>VALEU ISAAAAAC 1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Projeto 2</div>
+                            <div class="collapsible-body">
+                                <p>VALEU ISAAAAC 2</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Projeto 3</div>
+                            <div class="collapsible-body">
+                                <p>VALEU MARQUINHOS GAMEPLAYYY 3</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Projeto 4</div>
+                            <div class="collapsible-body">
+                                <p>VALE MARQUINHOS GAMEPLAYYYY 4</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Citações do Político em Processos</h4>
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">Citação 1</div>
+                            <div class="collapsible-body">
+                                <p>QUE PASA 1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Citação 2</div>
+                            <div class="collapsible-body">
+                                <p>QUE PASA 2</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Citação 3</div>
+                            <div class="collapsible-body">
+                                <p>QUE PASA 3</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">Citação 4</div>
+                            <div class="collapsible-body">
+                                <p>CABRON 4</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-              
-          </div>
-          <div class="row">
-            <h3>Informações sobre atuação do político</h3>
-            <div>
-              <h4>Gastos do político</h4>
-              
-            </div>
-            <div>
-              <h4>Projetos de Lei</h4>     
-              <ul class="collapsible popout" data-collapsible="accordion">   
-                <li>  
-                  <div class="collapsible-header">Projeto 1</div>
-                  <div class="collapsible-body"><p>VALEU ISAAAAAC 1</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Projeto 2</div>
-                  <div class="collapsible-body"><p>VALEU ISAAAAC 2</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Projeto 3</div>
-                  <div class="collapsible-body"><p>VALEU MARQUINHOS GAMEPLAYYY 3</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Projeto 4</div>
-                  <div class="collapsible-body"><p>VALE MARQUINHOS GAMEPLAYYYY 4</p></div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4>Citações do Político em Processos</h4> 
-              <ul class="collapsible popout" data-collapsible="accordion">   
-                <li>  
-                  <div class="collapsible-header">Citação 1</div>
-                  <div class="collapsible-body"><p>QUE PASA 1</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Citação 2</div>
-                  <div class="collapsible-body"><p>QUE PASA 2</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Citação 3</div>
-                  <div class="collapsible-body"><p>QUE PASA 3</p></div>
-                </li>
-                <li>
-                  <div class="collapsible-header">Citação 4</div>
-                  <div class="collapsible-body"><p>CABRON 4</p></div>
-                </li>
-              </ul>
-          </div>
         </div>
-      </div>
-      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="materialize/js/materialize.js"></script>
-      <script type="text/javascript">
-         $(document).ready(function() {
-         $('select').material_select();
-         });
-      </script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="materialize/js/materialize.js"></script>
+        <script src="highcharts/js/highcharts.js"></script>
+        <script src="highcharts/js/modules/exporting.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $('select').material_select();
+            criar_grafico();
+            });
+             
+             function criar_grafico()
+             {
+            // Build the chart
+            $('#graf_gasto').highcharts({
+               chart: {
+                   plotBackgroundColor: null,
+                   plotBorderWidth: null,
+                   plotShadow: false,
+                   type: 'pie'
+               },
+               title: {
+                   text: 'Gastos particulares do político no último mês'
+               },
+               tooltip: {
+                   pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+               },
+               plotOptions: {
+                   pie: {
+                       allowPointSelect: true,
+                       cursor: 'pointer',
+                       dataLabels: {
+                           enabled: false
+                       },
+                       showInLegend: true
+                   }
+               },
+               series: [{
+                   name: 'Gasto mensal',
+                   colorByPoint: true,
+                   data: [{
+                       name: 'Viagens',
+                       y: 50000
+                   }, {
+                       name: 'Alimentação',
+                       y: 10000
+                   }, {
+                       name: 'Casa/Apartamento',
+                       y: 50000
+                   }, {
+                       name: 'Escola dos filhos',
+                       y: 25000
+                   }, {
+                       name: 'Gasolina',
+                       y: 10000
+                   }, {
+                       name: 'Outros',
+                       y: 5000
+                   }]
+               }]
+            });
+             }
+        </script>
     </body>
-    </html>
+</html>
+

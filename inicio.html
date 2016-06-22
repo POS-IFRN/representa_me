@@ -8,21 +8,23 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <style>
+          .input-field input:focus
+          {
+              
+               border-bottom: 1px solid #42a5f5 !important;
+               box-shadow: 0 1px 0 0 #42a5f5 !important
+          }
+      </style>
    </head>
    <body>
-      <nav class="white" role="navigation">
+      <nav class="blue lighten-1 white-text" role="navigation">
          <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo blue-text text-lighten-1">Representa Me</a>
-            <ul class="right hide-on-med-and-down">
-               <li><a href="#" class="blue-text text-lighten-1">Navbar Link</a></li>
-            </ul>
-            <ul id="nav-mobile" class="side-nav">
-               <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a>
          </div>
       </nav>
-      <div class="section no-pad-bot" id="index-banner">
+       <div class="divider"></div>
+      <div class="section no-pad-bot grey lighten-3">
          <div class="container">
             <br><br>
             <h1 class="header center blue-text text-lighten-1">Representa Me</h1>
@@ -33,17 +35,17 @@
             <form id="form_consulta">
                <div class="row">
                   <div class="input-field col s6">
-                     <input id="txtbusca" type="text" class="validate">
-                     <label for="txtbusca">Busca</label>
+                     <input id="txtbusca" type="text" class="black-text">
+                     <label for="txtbusca" class="blue-text text-lighten-1">Busca</label>
                   </div>
                   <div class="input-field col s6">
-                     <select>
+                     <select class="black-text">
                         <option value="" disabled selected>Escolha o tipo de busca</option>
                         <option value="estado">Estado</option>
                         <option value="politico">Político</option>
                         <option value="partido">Partido</option>
                      </select>
-                     <label>Tipo de busca</label>
+                     <label class="blue-text text-lighten-1">Tipo de busca</label>
                   </div>
                </div>
                <div class="row center">
