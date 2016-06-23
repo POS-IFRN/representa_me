@@ -8,21 +8,27 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+       <style>
+           .striped>tbody>tr:nth-child(odd)>td, 
+.striped>tbody>tr:nth-child(odd)>th {
+   background-color: #e0f2f1;
+ }
+       </style>
    </head>
-   <body>
-      <nav class="blue lighten-1 white-text" role="navigation">
+   <body class="blue-grey darken-4">
+      <nav class="teal accent-4 white-text" role="navigation">
          <div class="nav-wrapper container">
             <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a>      
          </div>
       </nav>
        <div class="divider"></div>
-      <div class="section no-pad-bot grey lighten-3">
+      <div class="section grey lighten-4">
          <div class="container">
           <div class="row center">
             <h2 class="blue-text text-lighten-1">Resultados da busca por nome</h2>
           </div>
           <div class="row">
-            <table class="highlight">
+            <table class="striped">
               <thead>
                 <tr>
                   <th data-field="nome">Nome</th>
@@ -62,6 +68,11 @@
           </div>
         </div>
       </div>
+        <footer style="width: 100%; float: left; text-align: center; ">
+            <address>
+                <p>aaaaaa</p>
+            </address>
+       </footer>
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="materialize/js/materialize.js"></script>
       <script type="text/javascript">
