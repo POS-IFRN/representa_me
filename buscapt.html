@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>Representa me</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </head>
+   <body class="blue-grey darken-4">
+      <nav class="teal accent-4 white-text" role="navigation">
+         <div class="nav-wrapper container">
+            <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a>
+         </div>
+      </nav>
+       <div class="divider"></div>
+      <div class="section grey lighten-4">
+         <div class="container">
+          <div class="row center">
+            <h2 class="blue-text text-lighten-3">Resultados da busca por partido</h2>
+          </div>
+          <div class="row col s12">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th data-field="nome">Nome</th>
+                  <th data-field="partido">Partido</th>
+                  <th data-feld="cargo">Cargo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="visualizar.html?pol=jairb">Luiz Inácio Lula da Silva</a></td>
+                  <td>PT</td>
+                  <td>Presidente da República</td>
+                </tr>
+                <tr>
+                  <td>Olívio Dutra</td>
+                  <td>PT</td>
+                  <td>Prefeito</td>
+                </tr>
+                <tr>
+                  <td>Rui Falcão</td>
+                  <td>PT</td>
+                  <td>Presidente Nacional</td>
+
+                </tr>
+                <tr>
+                  <td>Dilma Rousseff</td>
+                  <td>PT</td>
+                  <td>Presidente da República</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="materialize/js/materialize.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         $('select').material_select();
+         });
+      </script>
+    </body>
