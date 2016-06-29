@@ -33,6 +33,17 @@
                     <div id="graf_gasto">
                     </div>
                 </div>
+                  <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Teste de satisfação do político</h4>
+                      <p>Você se sente representado pelo político em questão?</p>
+                    </div>
+                    <div class="modal-footer">
+                         <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Não</a>
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Sim</a>
+                       
+                    </div>
+                  </div>
                 <div>
                     <h5>Projetos de Lei</h5>
                     <ul class="collapsible popout" data-collapsible="accordion">
@@ -155,6 +166,12 @@
                }]
             });
              }
+            
+            
+          var options = [
+            {selector: '#graf_gasto', offset: 450, callback: function() {   $('#modal1').openModal();}}
+          ];
+          Materialize.scrollFire(options);
         </script>
     </body>
 </html>
