@@ -2,241 +2,312 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>Representa me</title>
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
-    <body class="blue-grey darken-4">
-        <nav class="teal accent-4 white-text" role="navigation">
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a>
-            </div>
-        </nav>
-        <div class="divider"></div>
-        <div class="section no-pad-bot grey lighten-3">
-            <div class="container">
-                <br><br>
-                <h1 class="header center blue-text text-lighten-3">Representa Me</h1>
-                <div class="row center">
-                    <h5 class="header col s12 light">Projeto desenvolvido para a disciplina de Projeto de Interface de Usuário</h5>
+   <style></style>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>Representa me</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </head>
+   <body class="blue-grey darken-4">
+      <nav class="teal accent-4 white-text" role="navigation">
+         <div class="nav-wrapper container">
+            <a id="logo-container" href="inicio.html" class="brand-logo">Representa Me</a>
+         </div>
+      </nav>
+      <div class="divider"></div>
+      <div class="section no-pad-bot grey lighten-3">
+      <div class="container">
+         <!--<br><br>
+            <h1 class="header center blue-text text-lighten-3">Representa Me</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Projeto desenvolvido para a disciplina de Projeto de Interface de Usuário</h5>
+            -->
+         <br><br>
+         <form id="form_consulta">
+            <div class="row">
+               <div class="col s12">
+                  <div class="input-field col s10">
+                     <div class="row">
+                        <input id="txtbusca" type="text" class="black-text">
+                        <label for="txtbusca" class="blue-text text-lighten-3">Busca</label>
+                     
+                     <div  class="col s2">
+                        <a id="buscar-button" href="busca.html" class="btn-large waves-effect waves-light blue lighten-3"  >Buscar</a>
+                     </div>
+                    </div>
+                  </div>
                 </div>
-                <br><br>
-                <form id="form_consulta">
-                    <div class="row">
-                        <div class="col s4">
-                            <p>Busca pelo mapa do Brasil</p>
-                            <div id="mapabusca">
-                            </div>
-                            
-                        </div>
-                        <div class="col s4">
-                            <p>Busca pelos partidos</p>
-                            <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <img src="assets/images/fotoperfil.png" alt="" class="circle">
-                                    <span class="title">PT</span>
-                                    
-                                    <a href="buscapt.html?part=pt" class="secondary-content">
-					<i class="material-icons">send</i>
-					</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col s4">
-                            <p>Busca pelos políticos mais buscados</p>
-                            <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <img src="assets/images/fotoperfil.png" alt="" class="circle">
-                                    <span class="title">Jair Bolsonaro</span>
-                                    <p>PMDB<br>
-                                        Deputado Federal
-                                    </p>
-                                    <a href="visualizar.html?pol=jairb" class="secondary-content">
-					<i class="material-icons">send</i>
-					</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="txtbusca" type="text" class="black-text">
-                            <label for="txtbusca" class="blue-text text-lighten-3">Busca</label>
-                        </div>
-                    </div>
-                    <div class="row center">
-                        <a id="buscar-button" href="busca.html" class="btn-large waves-effect waves-light blue lighten-3">Buscar</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="materialize/js/materialize.js"></script>
-        <script src="highmaps/js/highmaps.js"></script>
-        <script src="highmaps/js/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-            $('select').material_select();
-            });
-            var data = [
-        {
-            "hc-key": "br-sp",
-            "value": 0
-        },
-        {
-            "hc-key": "br-ma",
-            "value": 1
-        },
-        {
-            "hc-key": "br-pa",
-            "value": 2
-        },
-        {
-            "hc-key": "br-sc",
-            "value": 3
-        },
-        {
-            "hc-key": "br-ba",
-            "value": 4
-        },
-        {
-            "hc-key": "br-ap",
-            "value": 5
-        },
-        {
-            "hc-key": "br-ms",
-            "value": 6
-        },
-        {
-            "hc-key": "br-mg",
-            "value": 7
-        },
-        {
-            "hc-key": "br-go",
-            "value": 8
-        },
-        {
-            "hc-key": "br-rs",
-            "value": 9
-        },
-        {
-            "hc-key": "br-to",
-            "value": 10
-        },
-        {
-            "hc-key": "br-pi",
-            "value": 11
-        },
-        {
-            "hc-key": "br-al",
-            "value": 12
-        },
-        {
-            "hc-key": "br-pb",
-            "value": 13
-        },
-        {
-            "hc-key": "br-ce",
-            "value": 14
-        },
-        {
-            "hc-key": "br-se",
-            "value": 15
-        },
-        {
-            "hc-key": "br-rr",
-            "value": 16
-        },
-        {
-            "hc-key": "br-pe",
-            "value": 17
-        },
-        {
-            "hc-key": "br-pr",
-            "value": 18
-        },
-        {
-            "hc-key": "br-es",
-            "value": 19
-        },
-        {
-            "hc-key": "br-rj",
-            "value": 20
-        },
-        {
-            "hc-key": "br-rn",
-            "value": 21
-        },
-        {
-            "hc-key": "br-am",
-            "value": 22
-        },
-        {
-            "hc-key": "br-mt",
-            "value": 23
-        },
-        {
-            "hc-key": "br-df",
-            "value": 24
-        },
-        {
-            "hc-key": "br-ac",
-            "value": 25
-        },
-        {
-            "hc-key": "br-ro",
-            "value": 26
-        }
-    ];
-
-    // Initiate the chart
-    $('#mapabusca').highcharts('Map', {
-
-        title : {
-            text : 'Highmaps basic demo'
-        },
-
-        subtitle : {
-            text : 'Source map: <a href="https://code.highcharts.com/mapdata/countries/br/br-all.js">Brazil</a>'
-        },
-
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        colorAxis: {
-            min: 0
-        },
-
-        series : [{
-            data : data,
-            mapData: Highcharts.maps['countries/br/br-all'],
-            joinBy: 'hc-key',
-            name: 'Random data',
-            states: {
-                hover: {
-                    color: '#BADA55'
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}'
-            }
-        }]
-    });
-        </script>
-    </body>
+                  <div class="col s4">
+                     <p style = "color:#26A6A6"><b>Políticos por estado</b></p>
+                     <div id="mapabusca">
+                     </div>
+                  </div>
+                  <div class="col s4">
+                     <p style = "color:#26A6A6"><b>Partidos</b></p>
+                     <ul class="collection">
+                        <a href="buscapt.html?part=pt">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/pt.jpg" alt="" class="circle">
+                              <span class="title">PT</span>
+                              <!-- <a href="buscapt.html?part=pt" class="secondary-content"> -->
+                              <!--                           <i class="material-icons" style="float:right">send</i>-->
+                              <!--  </a> -->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                        <a href="buscapt.html?part=psdb">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/psdbb.jpg" alt="" class="circle">
+                              <span class="title">PSDB</span>
+                              <!-- <a href="buscapt.html?part=pt" class="secondary-content"> -->
+                              <!--                           <i class="material-icons" style="float:right">send</i>-->
+                              <!--  </a> -->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                        <a href="buscapt.html?part=psol">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/psoll.jpg" alt="" class="circle">
+                              <span class="title">PSOL</span>
+                              <!-- <a href="buscapt.html?part=pt" class="secondary-content"> -->
+                              <!-- <i class="material-icons">send</i> -->
+                              <!--                           <i class="material-icons" style="float:right">send</i>-->
+                              <!--  </a> -->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                        <a href="buscapt.html?part=pcdob">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/pcdob.jpg" alt="" class="circle">
+                              <span class="title">PCdoB</span>
+                              <!-- <a href="buscapt.html?part=pt" class="secondary-content"> -->
+                              <!-- <i class="material-icons">send</i> -->
+                              <!--<i class="material-icons" style="float:right">send</i>-->
+                              <!--  </a> -->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                     </ul>
+                  </div>
+                  <div class="col s4">
+                     <p style = "color:#26A6A6"><b>Políticos</b></p>
+                     <ul class="collection">
+                        <a href="visualizar.html?pol=jairb">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/bolsominion.jpg" alt="" class="circle">
+                              <span class="title">Jair Bolsonaro</span>
+                              <p>PMDB<br>
+                                 Deputado Federal
+                              </p>
+                              <!-- <a href="visualizar.html?pol=jairb" class="secondary-content">
+                                 <i class="material-icons">send</i>
+                                 </a>
+                                 -->
+                              <!--                           <i class="material-icons">send</i>-->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                        <a href="visualizar.html?pol=jairb">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/lula.jpg" alt="" class="circle">
+                              <span class="title">Luís Inácio Lula da Silva</span>
+                              <p>PT<br>
+                                 Ministro-chefe da Casa Civil
+                              </p>
+                              <!-- <a href="visualizar.html?pol=jairb" class="secondary-content">
+                                 <i class="material-icons">send</i>
+                                 </a>
+                                 -->
+                              <!--                           <i class="material-icons">send</i>-->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                        <a href="visualizar.html?pol=jairb">
+                           <li class="collection-item avatar">
+                              <img src="assets/images/cheiraleite.png" alt="" class="circle">
+                              <span class="title">Aécio Neves</span>
+                              <p>PSDB<br>
+                                 Senador do Brasil por Minas Gerais
+                              </p>
+                              <!-- <a href="visualizar.html?pol=jairb" class="secondary-content">
+                                 <i class="material-icons">send</i>
+                                 </a>
+                                 -->
+                              <!--                           <i class="material-icons">send</i>-->
+                           </li>
+                           <div class="divider"></div>
+                        </a>
+                     </ul>
+                  </div>
+               </div>
+               <div class="divider"></div>
+         </form>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="materialize/js/materialize.js"></script>
+      <script src="highmaps/js/highmaps.js"></script>
+      <script src="highmaps/js/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         $('select').material_select();
+         });
+         var data = [
+         {
+         "hc-key": "br-sp",
+         "value": 0
+         },
+         {
+         "hc-key": "br-ma",
+         "value": 1
+         },
+         {
+         "hc-key": "br-pa",
+         "value": 2
+         },
+         {
+         "hc-key": "br-sc",
+         "value": 3
+         },
+         {
+         "hc-key": "br-ba",
+         "value": 4
+         },
+         {
+         "hc-key": "br-ap",
+         "value": 5
+         },
+         {
+         "hc-key": "br-ms",
+         "value": 6
+         },
+         {
+         "hc-key": "br-mg",
+         "value": 7
+         },
+         {
+         "hc-key": "br-go",
+         "value": 8
+         },
+         {
+         "hc-key": "br-rs",
+         "value": 9
+         },
+         {
+         "hc-key": "br-to",
+         "value": 10
+         },
+         {
+         "hc-key": "br-pi",
+         "value": 11
+         },
+         {
+         "hc-key": "br-al",
+         "value": 12
+         },
+         {
+         "hc-key": "br-pb",
+         "value": 13
+         },
+         {
+         "hc-key": "br-ce",
+         "value": 14
+         },
+         {
+         "hc-key": "br-se",
+         "value": 15
+         },
+         {
+         "hc-key": "br-rr",
+         "value": 16
+         },
+         {
+         "hc-key": "br-pe",
+         "value": 17
+         },
+         {
+         "hc-key": "br-pr",
+         "value": 18
+         },
+         {
+         "hc-key": "br-es",
+         "value": 19
+         },
+         {
+         "hc-key": "br-rj",
+         "value": 20
+         },
+         {
+         "hc-key": "br-rn",
+         "value": 21
+         },
+         {
+         "hc-key": "br-am",
+         "value": 22
+         },
+         {
+         "hc-key": "br-mt",
+         "value": 23
+         },
+         {
+         "hc-key": "br-df",
+         "value": 24
+         },
+         {
+         "hc-key": "br-ac",
+         "value": 25
+         },
+         {
+         "hc-key": "br-ro",
+         "value": 26
+         }
+         ];
+         
+         // Initiate the chart
+         $('#mapabusca').highcharts('Map', {
+         
+         title : {
+         text : 'Políticos por estado'
+         },
+         
+         subtitle : {
+         text : 'Mapa de <a href="https://code.highcharts.com/mapdata/countries/br/br-all.js">Calor</a>'
+         },
+         
+         mapNavigation: {
+         enabled: true,
+         buttonOptions: {
+             verticalAlign: 'bottom'
+         }
+         },
+         
+         colorAxis: {
+         min: 0
+         },
+         
+         series : [{
+         data : data,
+         mapData: Highcharts.maps['countries/br/br-all'],
+         joinBy: 'hc-key',
+         name: 'Quantidade de políticos',
+         states: {
+             hover: {
+                 color: '#BADA55'
+             }
+         },
+         dataLabels: {
+             enabled: true,
+             format: '{point.name}'
+         }
+         }]
+         });
+      </script>
+   </body>
 </html>
-
 
