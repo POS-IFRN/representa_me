@@ -14,3 +14,15 @@ background-color: #e0f2f1 !important;
 {
 	margin-left: -1px !important;
 }
+
+.input-group {
+    display: table;
+}
+
+.input-group input, .suffix {
+    display: table-cell;
+}
+
+.suffix {
+    width:1%;
+}
