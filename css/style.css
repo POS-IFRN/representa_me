@@ -23,6 +23,10 @@ background-color: #e0f2f1 !important;
     display: table-cell;
 }
 
+.title {
+  font-weight: bold;
+}
+
 .suffix {
     width:1%;
 }
